@@ -21,7 +21,7 @@
   5.4 Implementation：點選 Run Implementation，等待過程完成。  
   5.5 Generate Bitstream：點選 Generate Bitstream，等待過程完成，再點選 Open Hardware Manager 連結 Basys3 板子，最後點選 Program Device 將生成出來的.bit檔案燒錄至板子。
 ## 6. 如何載入或修改RISC-V程式 
-  6.1 修改軟體代碼：改 main.c 檔案。你可以在此處調整反應時間的測量邏輯、顯示字串或系統參數。  
+  6.1 修改軟體代碼：修改 main.c 檔案。你可以在此處調整反應時間的測量邏輯、顯示字串或系統參數。  
   6.2 重新編譯程式：使用 RISC-V GCC 工具鏈將 main.c 編譯為執行檔，並轉換為記憶體可用的 .hex 格式。  
   6.3 更新 BRAM 初始化檔案：將新生成的 main.hex 檔案內容，更新至 Vivado 專案所使用的 BRAM 記憶體初始化檔案中。  
   6.4 重新產生 Bitstream： 回到 Vivado 專案介面，重新點選 Generate Bitstream。Vivado 會將最新的 .hex 數據封裝進 FPGA 的 BRAM 區塊中。  
